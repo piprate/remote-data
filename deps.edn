@@ -4,6 +4,6 @@
                                   :deps/manifest :deps}}
 
  :aliases {:test {:extra-paths ["test"]
-                  :extra-deps {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner.git"
-                                                          :sha     "cb96e80f6f3d3b307c59cbeb49bb0dcb3a2a780b"}}
-                  :main-opts  ["-m" "cognitect.test-runner"]}}}
+                   :extra-deps {lambdaisland/kaocha {:mvn/version "1.0.829"}
+                                lambdaisland/kaocha-cljs {:mvn/version "0.0-71"}}
+                  :main-opts  ["-m" "kaocha.runner"]}}}
