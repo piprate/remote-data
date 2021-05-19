@@ -69,3 +69,9 @@
 (defn success?
   [rd]
   (= ::success (::status rd)))
+
+(defn select
+  [rd f & args]
+  (if (success? rd)
+    (success (apply f (::data rd) args))
+    rd))
